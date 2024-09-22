@@ -63,6 +63,7 @@ input {
     border: none;
     outline: none;
     color: #3d5a80;
+    padding-left: 0.5rem;
 }
 
 .btn {
