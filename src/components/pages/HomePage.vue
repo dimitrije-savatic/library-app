@@ -5,51 +5,15 @@
                 <input type="search" name="search" class="input-home" placeholder="Find the desired book...">
             </div>
             <div class="bottom-block">
-                <div class="grid-container">
+                <div class="grid-container" v-for="(book, index) in books" :key="index">
                     <div class="grid-top">
-                        <img src="src/assets/images/book.jpg" alt="">
+                        <img src="../../assets/images/book.jpg" alt="book">
                     </div>
                     <div class="grid-bottom">
-                        <h3>Book Name</h3>
+                        <h3>{{ book.name }}</h3>
                         <div class="grid-bottom-footer">
-                            <p>book writer</p>
-                            <button class="btn btn-grid">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-container">
-                    <div class="grid-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="grid-bottom">
-                        <h3>Book Name</h3>
-                        <div class="grid-bottom-footer">
-                            <p>book writer</p>
-                            <button class="btn btn-grid">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-container">
-                    <div class="grid-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="grid-bottom">
-                        <h3>Book Name</h3>
-                        <div class="grid-bottom-footer">
-                            <p>book writer</p>
-                            <button class="btn btn-grid">Details</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-container">
-                    <div class="grid-top">
-                        <img src="" alt="">
-                    </div>
-                    <div class="grid-bottom">
-                        <h3>Book Name</h3>
-                        <div class="grid-bottom-footer">
-                            <p>book writer</p>
-                            <button class="btn btn-grid">Details</button>
+                            <p>{{ book.author }}</p>
+                            <button class="btn btn-grid">Details...</button>
                         </div>
                     </div>
                 </div>
@@ -60,7 +24,45 @@
 
 <script>
 export default {
-
+    components: {
+    },
+    data() {
+        return {
+            books: [{
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            {
+                'name': 'Lord of the Rings',
+                'author': 'J.R.R. Tolkien'
+            },
+            ]
+        }
+    }
 }
 </script>
 
@@ -89,8 +91,9 @@ export default {
     width: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 1rem;
+    gap: 2rem 1rem;
     margin-top: 5rem;
+    margin-bottom: 5rem;
     justify-content: space-evenly;
 }
 
@@ -108,13 +111,22 @@ export default {
 }
 
 .grid-top {
-    height: 50%;
+    height: 60%;
     width: 100%;
+}
+
+.grid-top img {
+    background-position: center;
+    background-attachment: inherit;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 .grid-bottom {
     width: 100%;
-    height: 50%;
+    height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,6 +139,7 @@ export default {
 .grid-bottom-footer {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
     margin-left: 0.7rem;
     margin-right: 0.7rem;
 }
