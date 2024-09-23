@@ -7,7 +7,7 @@
             <div class="bottom-block">
                 <div class="grid-container">
                     <div class="grid-top">
-                        <img src="" alt="">
+                        <img src="src/assets/images/book.jpg" alt="">
                     </div>
                     <div class="grid-bottom">
                         <h3>Book Name</h3>
